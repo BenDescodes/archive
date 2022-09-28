@@ -68,23 +68,11 @@ INNER JOIN da ON id_da = da_id
 INNER JOIN grade ON id_grade = grade_id;
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-CREATE OR REPLACE VIEW V_user AS 
+/* CREATE OR REPLACE VIEW v_user AS 
 SELECT * FROM users 
 LEFT JOIN personnel ON users.pers_id = personnel.id_personnel 
 INNER JOIN da ON users.da_id = da.id_da 
-INNER JOIN grade ON personnel.grade_id = grade.id_grade ORDER BY id_users;
+INNER JOIN grade ON personnel.grade_id = grade.id_grade ORDER BY id_users; */
 
 
 -- j'ai crée la table categorie
