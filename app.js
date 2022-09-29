@@ -16,6 +16,9 @@ app.use((req,res,next)=>{
 })
 app.use('/files',express.static(path.join(__dirname,'files')))
 // users api
+app.get('/',(req,res)=>{
+    res.json('Hello world')
+})
 app.use('/users',userRouter);
 app.use('/list',listRouter)
 app.use('/archive',archiveRouter)
