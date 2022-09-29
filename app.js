@@ -15,10 +15,11 @@ app.use((req,res,next)=>{
     next();
 })
 app.use('/files',express.static(path.join(__dirname,'files')))
-// users api
+
 app.get('/',(req,res)=>{
-    res.json('Hello world')
+    res.json('Hello World ! ')
 })
+// users api
 app.use('/users',userRouter);
 app.use('/list',listRouter)
 app.use('/archive',archiveRouter)
