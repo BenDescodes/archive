@@ -16,13 +16,15 @@ app.use((req,res,next)=>{
 })
 app.use('/files',express.static(path.join(__dirname,'files')))
 // users api
-app.use(express.static(path.join(__dirname, "build")));
+/* app.use(express.static(path.join(__dirname, "build"))); */
 
 // serve index.html from the build folder
 /* app.get("/*", (req, res) => {
   res.sendFile(path.join(__dirname, "build", "index.html"));
 }); */
-app.get('/',(res,res)=>{res.json('Hello World ! ')})
+app.get('/',(req,res)=>{
+    res.json('Hello World ! ')
+})
 
 app.use('/users',userRouter);
 app.use('/list',listRouter)
